@@ -89,7 +89,7 @@ fun EditDeckScreen(
             }
         }
     ) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(horizontal = 16.dp)) {
+        Column(modifier = Modifier.fillMaxSize().padding(padding).imePadding().padding(horizontal = 16.dp)) {
             
             OutlinedTextField(
                 value = deckName.value,
@@ -104,7 +104,7 @@ fun EditDeckScreen(
                 )
             )
 
-            LazyColumn(modifier = Modifier.fillMaxSize()) {
+            LazyColumn(modifier = Modifier.fillMaxSize().bouncyOverscroll()) {
                 itemsIndexed(cards) { index, card ->
                     Card(
                         modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),

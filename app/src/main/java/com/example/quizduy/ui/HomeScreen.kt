@@ -35,7 +35,7 @@ fun HomeScreen(viewModel: QuizViewModel, onDeckClick: (String) -> Unit, onCreate
                 Text("No decks found. Create one!")
             }
         } else {
-            LazyColumn(modifier = Modifier.fillMaxSize().padding(padding)) {
+            LazyColumn(modifier = Modifier.fillMaxSize().padding(padding).bouncyOverscroll()) {
                 items(decks) { deck ->
                     Card(
                         modifier = Modifier

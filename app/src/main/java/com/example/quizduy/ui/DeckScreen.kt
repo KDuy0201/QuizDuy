@@ -64,7 +64,7 @@ fun DeckScreen(
             if (deck.cards.isEmpty()) {
                 Text("No cards yet. Add some!")
             } else {
-                LazyColumn(modifier = Modifier.fillMaxSize()) {
+                LazyColumn(modifier = Modifier.fillMaxSize().bouncyOverscroll()) {
                     items(deck.cards) { card ->
                         Card(
                             modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
